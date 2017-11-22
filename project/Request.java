@@ -1,16 +1,16 @@
 public class Request {
-  private Day theDay;
+  private Date theDate;
   private Room theRoom;
   private TimeSlot theTimeSlot;
 
-  public Request(Day d, Room r, TimeSlot t) {
-    theDay = d;
+  public Request(Date d, Room r, TimeSlot t) {
+    theDate = d;
     theRoom = r;
     theTimeSlot = t;
   }
 
-  public Day getTheDay() {
-    return theDay;
+  public Date getTheDate() {
+    return theDate;
   }
 
   public Room getTheRoom() {
@@ -21,9 +21,6 @@ public class Request {
     return theTimeSlot;
   }
 
-  public String getDay() {
-    return this.theDay.toString();
-  }
 
 
   public boolean equals(Object other) {
@@ -31,13 +28,13 @@ public class Request {
       return false;
     }
     Request check = (Request) other;
-    return this.theDay.toString().equals(check.theDay.toString())
+    return this.theDate.equals(check.getTheDate())
           && this.theRoom.getName().equals(check.theRoom.getName())
           && this.theTimeSlot.getBlock().equals(check.theTimeSlot.getBlock());
   }
 
   public String toString() {
-    String s = (theDay.toString() + "\n" + theRoom.toString() +"\n" +
+    String s = (theDate.toString() + "\n" + theRoom.toString() +"\n" +
                 theTimeSlot.toString());
     return s;
   }
