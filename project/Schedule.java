@@ -53,8 +53,26 @@ public class Schedule {
   public void display() {
     if (changed) {
       for (int i = 0; i < approvedRequests.size(); ++i) {
-        if ((approvedRequests.get(i).getDay()).equals("Monday")) {
+        if ((approvedRequests.get(i).getDay()).equals("Sunday")) {
+          sunday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Monday")) {
           monday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Tuesday")) {
+          tuesday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Wednesday")) {
+          wednesday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Thursday")) {
+          thursday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Friday")) {
+          friday.add(approvedRequests.get(i));
+        }
+        else if ((approvedRequests.get(i).getDay()).equals("Saturday")) {
+          saturday.add(approvedRequests.get(i));
         }
       }
       for (int i = 0; i < monday.size(); ++i) {
