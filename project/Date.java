@@ -3,10 +3,10 @@ public class Date {
   private int month;
   private int day;
 
-  public Date(int y, int m, int d) {
-    year = y;
-    month = m;
+  public Date(int d, int m, int y) {
     day = d;
+    month = m;
+    year = y;
   }
 
   public int getYear() {
@@ -26,13 +26,13 @@ public class Date {
       return false;
     }
     Date check = (Date) other;
-    return this.year == check.year
+    return this.day == check.day
           && this.month == check.month
-          && this.day == check.day;
+          && this.year == check.year;
   }
 
   public String toString() {
-    String date = year + " / " + month + " / " + day;
+    String date = day + " / " + month + " / " + year;
     return date;
   }
 }

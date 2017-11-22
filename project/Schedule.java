@@ -20,7 +20,6 @@ public class Schedule {
       if (r.equals(approvedRequests.get(i))) {
         conflict = true;
       }
-
     }
 
     if (conflict) {
@@ -32,8 +31,5 @@ public class Schedule {
       System.out.println("Request Approved");
       changed = true;
     }
-
   }
-
-
 }
