@@ -8,24 +8,25 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
 	//create class and extend with JFrame
 	public class DatePickerEX extends JFrame
-	{	
+	{
 			//add JPanel to the contentPane
 			private JPanel contentPane;
 			//declare variable
 			private JTextField txtDate;
-		
+
 			/**
 			 * Launch the application.
 			 */
 			public static void main(String[] args)// main method
 			{	// it will call the run method on that object
 				EventQueue.invokeLater(new Runnable()
-				{	
+				{
 					public void run()
 					{
-						try // try block 
+						try // try block
 						{
 						     //create frame object
 						     DatePickerEX frame = new DatePickerEX();
@@ -35,15 +36,15 @@ import javax.swing.border.EmptyBorder;
 					        {
 					         	e.printStackTrace();
 					        }
-				        }          
+				        }
 			        });
 		        }
-	 
+
 		/**
 		 * Create the frame.
 		 */
 		//create constructor of class
-		public DatePickerEX() 
+		public DatePickerEX()
 		{
 			//set title
 			setTitle("Date Picker ");
@@ -55,11 +56,11 @@ import javax.swing.border.EmptyBorder;
 			contentPane = new JPanel();
 			//set border of frame
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-			//set contentPane 
+			//set contentPane
 			setContentPane(contentPane);
 			//set layout null
 			contentPane.setLayout(null);
-			
+
 			//create text field
 			txtDate = new JTextField();
 			//set bounds of text field
@@ -68,26 +69,26 @@ import javax.swing.border.EmptyBorder;
 			contentPane.add(txtDate);
 			//set columns
 			txtDate.setColumns(10);
-			
+
 			//create button and there object
 			JButton btnNewButton = new JButton("New button");
 			String str = "Submit Date";
 			JButton submit = new JButton(str);
 			//perform action listener
-			btnNewButton.addActionListener(new ActionListener() 
-			{	
+			btnNewButton.addActionListener(new ActionListener()
+			{
 				//performed action
-				public void actionPerformed(ActionEvent arg0) 
+				public void actionPerformed(ActionEvent arg0)
 				{
 					//create frame new object  f
 					final JFrame f = new JFrame();
-					//set text which is collected by date picker i.e. set date 
+					//set text which is collected by date picker i.e. set date
 					txtDate.setText(new Datepicker(f).setPickedDate());
 					System.out.println(txtDate.getText());
 				}
 			});
-			
-			
+
+
 			//set button bound
 			btnNewButton.setBounds(223, 106, 27, 23);
 			submit.setBounds(102, 130, 50, 19);
@@ -96,4 +97,3 @@ import javax.swing.border.EmptyBorder;
 			contentPane.add(submit);
 		}
 	}
-
