@@ -193,7 +193,40 @@ public class main{
 		JLabel label = new JLabel();
 
 		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		jframe.setTitle("Request");
+		jframe.setTitle("Request Period");
+
+	  String greeting = "Please select when you will need the room for";
+		String fall = "Request for fall semester";
+		String winter = "Request for winter semester";
+		String oneDay = "Request for single day";
+
+    label.setText(greeting);
+		JButton falSelec = new JButton(fall);
+		JButton winSelec = new JButton(winter);
+		JButton sglDay = new JButton(oneDay);
+
+		panel.add(label);
+		panel.add(falSelec);
+		panel.add(winSelec);
+		panel.add(sglDay);
+
+		jframe.add(panel);
+
+		ActionListener actionListener = new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() instanceof JButton) {
+					JButton button = (JButton) (e.getSource());
+					String select = button.getText();
+					if (select.equals("Request for single day")) {
+						createCalenderGUI();
+					}
+				}
+			}
+		};
+
+		sglDay.addActionListener(actionListener);
+
 
 		jframe.setVisible(true);
 
@@ -259,7 +292,7 @@ public class main{
 							//JDatePickerImpl datepicker = createCalenderGUI();
 							//jf2.add(datepicker);
 							//jf2.setVisible(true);
-							//jf2.repaint();
+							//jf2.repaint();``
 							//Calendar selectedValue = (Calendar) datepicker.getModel().getValue();
 							createCalenderGUI();
 							//System.out.println(datePicker.getJFormattedTextField().getText());
