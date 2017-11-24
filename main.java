@@ -10,11 +10,6 @@ import java.util.Properties;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import org.jdatepicker.JDatePicker;
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
-
 
 public class main{
 	void createGUI(){
@@ -27,7 +22,7 @@ public class main{
 		jframe.setTitle("GUI");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		jframe.setVisible(true);
+		//jframe.setVisible(true);
 		
 		String userString = "User";
 		String prinString = "Principal";
@@ -57,6 +52,7 @@ public class main{
 		
 		
 		jframe.add(panel);	
+		jframe.setVisible(true);
 	}
 	
 	public static void main(String args[]){
@@ -90,7 +86,7 @@ public class main{
 		JPanel panel = new JPanel();
 		
 		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		jframe.setTitle("Prinicpal Screen");
+		jframe.setTitle("Principal Screen");
 		
 		jframe.setVisible(true);
 		
@@ -380,75 +376,9 @@ public class main{
 	}
 	
 	public static void createSubmitGUI(){
-		JFrame jframe = new JFrame();
-		final int FRAME_WIDTH = 600;
-		final int FRAME_HEIGHT = 600;
-		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		jframe.setTitle("Time Slots");
-		
-		jframe.setVisible(true);
-		JLabel label = new JLabel();
-		JPanel panel = new JPanel();
-		String amSt = "am";
-		String pmSt = "pm";
-		String submitSch = "Submit Request";
-		String[] timeSch = {"1:00", "2:00", "3:00", "4:00", "5:00", "6:00","7:00"};
-		String[] roomSch = { "Room1", "Room2", "Room3", "Room4", "Room5" };
-		String[] dateSch = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct","Nov","Dec"};
-		String[] daySch = {"Mon", "Tues", "Weds", "Thurs", "Fri","Sat","Sun"};
-		String labelSt = " - ";
-
-		
-		JComboBox roomMenu = new JComboBox(roomSch);
-		roomMenu.setSelectedIndex(4);
-		JComboBox timeMenu = new JComboBox(timeSch);
-		
-		JComboBox roomMenu1 = new JComboBox(roomSch);
-		roomMenu.setSelectedIndex(4);
-		JComboBox timeMenu1 = new JComboBox(timeSch);
-		
-		JButton submit = new JButton(submitSch);
-		
-		JRadioButton am = new JRadioButton(amSt);
-		JRadioButton pm = new JRadioButton(pmSt);
-		
-		JRadioButton am1 = new JRadioButton(amSt);
-		JRadioButton pm2 = new JRadioButton(pmSt);
-		
-		
-		JComboBox dayMenu = new JComboBox(daySch);
-		dayMenu.setSelectedIndex(6);
-		
-		JComboBox dateMenu = new JComboBox(dateSch);
-		dateMenu.setSelectedIndex(11);
-		
-		panel.add(dateMenu);
-		panel.add(dayMenu);
-		
-		label.setText(labelSt);
-		
-		ButtonGroup buttonGroup = new ButtonGroup();
-		buttonGroup.add(submit);
-		buttonGroup.add(pm);
-		buttonGroup.add(am);
-		
-		
-		
-		
-		panel.add(roomMenu);
-		panel.add(timeMenu);
-		panel.add(am);
-		panel.add(pm);
-		panel.add(label);
-		panel.add(timeMenu1);
-		panel.add(am1);
-		panel.add(pm2);
-		panel.add(submit);
-		
-		
-		
-		jframe.add(panel);
-		
+	DatePickerSR frame = new DatePickerSR();
+		Datepicker schedule = new Datepicker(frame);
+		frame.setVisible(true);
 		
 	}
 	
@@ -483,4 +413,3 @@ public class main{
 		
 	}
 }
-
