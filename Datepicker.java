@@ -41,7 +41,7 @@ public class Datepicker {
                     //set focus painted false
                     button[x].setFocusPainted(false);
                     //set background colour
-                    button[x].setBackground(Color.white);
+                    button[x].setBackground(Color.white);                   
                     //if loop condition
                     if (x > 6)
                     //add action listener
