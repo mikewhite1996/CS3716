@@ -1,3 +1,5 @@
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,14 +12,6 @@ import java.util.Properties;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-<<<<<<< HEAD
-//import org.jdatepicker.JDatePicker;
-//import org.jdatepicker.impl.JDatePanelImpl;
-//import org.jdatepicker.impl.JDatePickerImpl;
-//import org.jdatepicker.impl.UtilDateModel;
-
-=======
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
 
 public class main{
 	void createGUI(){
@@ -29,15 +23,9 @@ public class main{
 		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		jframe.setTitle("GUI");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-<<<<<<< HEAD
 
 
 
-=======
-		
-		//jframe.setVisible(true);
-		
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
 		String userString = "User";
 		String prinString = "Principal";
 		JRadioButton userButton = new JRadioButton(userString);
@@ -63,15 +51,9 @@ public class main{
 		buttonGroup.add(prinButton);
 		panel.add(userButton);
 		panel.add(prinButton);
-<<<<<<< HEAD
 
 
 		jframe.add(panel);
-=======
-		
-		
-		jframe.add(panel);	
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
 		jframe.setVisible(true);
 	}
 
@@ -106,17 +88,10 @@ public class main{
 		JPanel panel = new JPanel();
 
 		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-<<<<<<< HEAD
 		jframe.setTitle("Prinicpal Screen");
 
 
 
-=======
-		jframe.setTitle("Principal Screen");
-		
-		jframe.setVisible(true);
-		
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
 		String scheduleString = "Create Schedule";
 		String viewString = "View Schedule";
 		String timeString = "View Time Slots";
@@ -408,7 +383,6 @@ public class main{
 	}
 
 	public static void createSubmitGUI(){
-<<<<<<< HEAD
 		JFrame jframe = new JFrame();
 		final int FRAME_WIDTH = 600;
 		final int FRAME_HEIGHT = 600;
@@ -480,12 +454,6 @@ public class main{
 		jframe.setVisible(true);
 
 
-=======
-	DatePickerSR frame = new DatePickerSR();
-		Datepicker schedule = new Datepicker(frame);
-		frame.setVisible(true);
-		
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
 	}
 
 	public static void createViewGUI(){
@@ -519,8 +487,4 @@ public class main{
 
 
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 89d5a1971a668013c15c12ffbf7af93730e7ce43
