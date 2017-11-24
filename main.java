@@ -74,8 +74,10 @@ public class main{
 			createTimeSlotsGUI();
 		}else if(answer2.equals("View Requests")){
 			createRequestsGUI();
+			// change to select a semesterGUI
+			// used to be createSubmitGUI();
 		}else if(answer2.equals("Submit a Request")){
-			createSubmitGUI();
+			dayOrSemesterGUI();
 		}else if(answer2.equals("Create the Schedule")){
 			createCalenderGUI();
 		}
@@ -180,6 +182,20 @@ public class main{
 		jframe.add(panel);
 		jframe.setVisible(true);
 
+
+	}
+
+	public static void dayOrSemesterGUI() {
+		JFrame jframe = new JFrame();
+		JPanel panel = new JPanel();
+		final int FRAME_WIDTH = 600;
+		final int FRAME_HEIGHT = 600;
+		JLabel label = new JLabel();
+
+		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+		jframe.setTitle("Request");
+
+		jframe.setVisible(true);
 
 	}
 
