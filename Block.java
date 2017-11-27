@@ -20,13 +20,24 @@ public enum Block {
     times = s;
   }
 
+  public String getTimes() {
+    return times;
+  }
+
 
 
   public String toString() {
     return this.times;
   }
 
-  //public equals()
+  public boolean equals(Block other) {
+    if (!(other instanceof Block)) {
+      return false;
+    }
+  Block check = (Block) other;
+
+  return this.times.equals(other.getTimes());
+  }
 
 
 }

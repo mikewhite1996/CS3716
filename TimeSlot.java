@@ -27,14 +27,16 @@ public class TimeSlot {
     }
   }
 
-  /*public boolean equals(Object other) {
-    (!(other instanceof TimeSlot)) {
+  public boolean equals(Object other) {
+    if (!(other instanceof TimeSlot)) {
       return false;
     }
     TimeSlot check = (TimeSlot) other;
-    return this.startBlock
-  }*/
-//unfinished
+    return this.startBlock.equals(check.startBlock)
+          && this.endBlock.equals(check.endBlock);
+  }
+
+
   public void printBlocks() {
     for(int i = 0; i < range.size(); ++i) {
       String letter = range.get(i).toString();

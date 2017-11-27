@@ -35,27 +35,34 @@ public class Info {
   }
 
 
-  /*public boolean equals(Object other) {
+  public boolean equals(Object other) {
     if (!(other instanceof Info)) {
       return false;
     }
     Info check = (Info) other;
 
-    boolean conflict = false;
+    boolean timeConflict = false;
 
     Block a = this.theBlock.getStartBlock();
+    Block b = this.theBlock.getEndBlock();
     ArrayList<Block> rA = check.getTheTimeSlot().getRange();
 
-    for (int i = 0; i < rA.size() ++i) {
-      if a.equals
-    }
+    for (int i = 0; i < rA.size(); ++i) {
+      if (rA.get(i).equals(a)) {
+        timeConflict = true;
+        }
+      else if (rA.get(i).equals(b)) {
+        timeConflict = true;
+        }
+      }
+
 
 
 
     return this.theDay.toString().equals(check.theDay.toString())
           && this.theRoom.getName().equals(check.theRoom.getName())
-          && this.theBlock.getStartBlock().equals(check.theBlock.getEndBlock());
-  }*/
+          && timeConflict;
+  }
 
   public String toString() {
     String s = (theDay.toString() + "\n" + theRoom.toString() +"\n" +

@@ -26,9 +26,7 @@ public class Schedule {
   }
 
   public void makeRequest(Info r) {
-    Day possibleDay = r.getTheDay();
-    Room possibleRoom = r.getTheRoom();
-    TimeSlot possibleTime = r.getTheTimeSlot();
+  
     boolean conflict = false;
 
     for (int i = 0; i < approvedRequests.size(); ++i) {
