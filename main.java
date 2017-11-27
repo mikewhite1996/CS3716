@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 
 
 public class main{
+	static Schedule fall = new Schedule();
 	void createGUI(){
 		JFrame jframe = new JFrame();
 		JPanel panel = new JPanel();
@@ -58,11 +59,10 @@ public class main{
 	}
 
 	public static void main(String args[]){
-		Schedule fall = new Schedule();
 		Group g1 = new Group("group");
 		Day day1 = new Day(DayName.MONDAY);
 		Room gym = new Gym();
-		TimeSlot block = new TimeSlot(Block.A);
+		TimeSlot block = new TimeSlot(Block.values()[0], Block.values()[3]);
 		Info info1 = new Info(g1, day1, gym, block);
 		fall.makeRequest(info1);
 	//	String sInfo = readSchedule(fall);
@@ -553,8 +553,8 @@ public class main{
 
 
 
-		//String labelS = getScheduleText();
-		//label.setText(labelS);
+		String labelS = fall.display();
+		label.setText(labelS);
 
 		panel.add(label);
 

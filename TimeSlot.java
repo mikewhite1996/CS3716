@@ -1,12 +1,32 @@
-public class TimeSlot {
-  Block block;
+import java.util.ArrayList;
 
-  public TimeSlot(Block block) {
-    this.block = block;
+public class TimeSlot {
+  private Block startBlock;
+  private Block endBlock;
+  private ArrayList<Block> range = new ArrayList<Block>();
+
+
+  public TimeSlot(Block start, Block end) {
+    startBlock = start;
+    endBlock = end;
+    int startIndex = startBlock.ordinal();
+    int endIndex = endBlock.ordinal();
+    for (Block b: Block.values()) {
+      if (b.ordinal() >= startIndex && b.ordinal() <= endIndex)
+      range.add(b);
+    }
   }
 
-  public Block getBlock() {
-    return block;
+
+
+
+
+  public Block getStartBlock() {
+    return startBlock;
+  }
+
+  public Block getEndBlock() {
+    return endBlock;
   }
 
   /*public void getBlockTime() {

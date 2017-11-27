@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Schedule {
-  private ArrayList<Info> approvedRequests;
+  public ArrayList<Info> approvedRequests;
   private ArrayList<Info> pendingRequests;
   private boolean changed = true;
 
