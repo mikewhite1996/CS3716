@@ -7,9 +7,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 public class CreateCalendarGUI {
 	public static void main(String args[]){
 	JFrame cFrame = new JFrame();
@@ -51,7 +48,7 @@ public class CreateCalendarGUI {
 	roomPanel.setAlignmentX( JPanel.LEFT_ALIGNMENT );
 
 	JLabel rLabel = new JLabel("Room: ");
-	JComboBox rooms = new JComboBox();
+	JComboBox<String> rooms = new JComboBox();
 	rooms.addItem("Gym");
 	rooms.addItem("Auditorium");
 	rooms.addItem("Music");
@@ -94,7 +91,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel mStart = new JLabel("Available from: ");
 	mondayPanel.add(mStart, c);	
-	JComboBox monStartBox = new JComboBox();
+	JComboBox<String> monStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		monStartBox.addItem(startTimes[x]);
@@ -105,7 +102,7 @@ public class CreateCalendarGUI {
 	JLabel mEnd = new JLabel(" until: ");
 	mondayPanel.add(mEnd, c);
 	
-	JComboBox monEndBox = new JComboBox();
+	JComboBox<String> monEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		monEndBox.addItem(endTimes[x]);
 	}
@@ -122,7 +119,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel tStart = new JLabel("Available from: ");
 	tuesdayPanel.add(tStart, c);	
-	JComboBox tuesStartBox = new JComboBox();
+	JComboBox<String> tuesStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		tuesStartBox.addItem(startTimes[x]);
@@ -133,7 +130,7 @@ public class CreateCalendarGUI {
 	JLabel tEnd = new JLabel(" until: ");
 	tuesdayPanel.add(tEnd, c);
 	
-	JComboBox tuesEndBox = new JComboBox();
+	JComboBox<String> tuesEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		tuesEndBox.addItem(endTimes[x]);
 	}
@@ -143,6 +140,19 @@ public class CreateCalendarGUI {
 	JButton repeatMon = new JButton("Repeat Monday");
 	c.gridx = 4;
 	tuesdayPanel.add(repeatMon, c);
+	
+	ActionListener actionListenerMon = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = monStartBox.getSelectedItem();
+			Object end = monEndBox.getSelectedItem();
+			tuesStartBox.setSelectedItem(start);
+			tuesEndBox.setSelectedItem(end);
+		}
+	};
+	repeatMon.addActionListener(actionListenerMon);	
+	
+	
 			
 	
 	JPanel wednesdayPanel = new JPanel(new GridBagLayout());
@@ -153,7 +163,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel wStart = new JLabel("Available from: ");
 	wednesdayPanel.add(wStart, c);	
-	JComboBox wedStartBox = new JComboBox();
+	JComboBox<String> wedStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		wedStartBox.addItem(startTimes[x]);
@@ -164,7 +174,7 @@ public class CreateCalendarGUI {
 	JLabel wEnd = new JLabel(" until: ");
 	wednesdayPanel.add(wEnd, c);
 	
-	JComboBox wedEndBox = new JComboBox();
+	JComboBox<String> wedEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		wedEndBox.addItem(endTimes[x]);
 	}
@@ -175,6 +185,18 @@ public class CreateCalendarGUI {
 	c.gridx = 4;
 	wednesdayPanel.add(repeatTue, c);
 	
+	ActionListener actionListenerTue = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = tuesStartBox.getSelectedItem();
+			Object end = tuesEndBox.getSelectedItem();
+			wedStartBox.setSelectedItem(start);
+			wedEndBox.setSelectedItem(end);
+		}
+	};
+	repeatTue.addActionListener(actionListenerTue);	
+	
+	
 	JPanel thursdayPanel = new JPanel(new GridBagLayout());
 	JLabel thu = new JLabel("Thursday:");
 	c.gridy = 0;
@@ -183,7 +205,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel thStart = new JLabel("Available from: ");
 	thursdayPanel.add(thStart, c);	
-	JComboBox thurStartBox = new JComboBox();
+	JComboBox<String> thurStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		thurStartBox.addItem(startTimes[x]);
@@ -194,7 +216,7 @@ public class CreateCalendarGUI {
 	JLabel thEnd = new JLabel(" until: ");
 	thursdayPanel.add(thEnd, c);
 	
-	JComboBox thurEndBox = new JComboBox();
+	JComboBox<String> thurEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		thurEndBox.addItem(endTimes[x]);
 	}
@@ -205,6 +227,18 @@ public class CreateCalendarGUI {
 	c.gridx = 4;
 	thursdayPanel.add(repeatWed, c);
 	
+	ActionListener actionListenerWed = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = wedStartBox.getSelectedItem();
+			Object end = wedEndBox.getSelectedItem();
+			thurStartBox.setSelectedItem(start);
+			thurEndBox.setSelectedItem(end);
+		}
+	};
+	repeatWed.addActionListener(actionListenerWed);	
+	
+	
 	JPanel fridayPanel = new JPanel(new GridBagLayout());
 	JLabel fri = new JLabel("Friday:");
 	c.gridy = 0;
@@ -213,7 +247,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel fStart = new JLabel("Available from: ");
 	fridayPanel.add(fStart, c);	
-	JComboBox friStartBox = new JComboBox();
+	JComboBox<String> friStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		friStartBox.addItem(startTimes[x]);
@@ -224,7 +258,7 @@ public class CreateCalendarGUI {
 	JLabel fEnd = new JLabel(" until: ");
 	fridayPanel.add(fEnd, c);
 	
-	JComboBox friEndBox = new JComboBox();
+	JComboBox<String> friEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		friEndBox.addItem(endTimes[x]);
 	}
@@ -234,6 +268,18 @@ public class CreateCalendarGUI {
 	JButton repeatThu = new JButton("Repeat Thursday");
 	c.gridx = 4;
 	fridayPanel.add(repeatThu, c);
+	
+	ActionListener actionListenerThu = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = thurStartBox.getSelectedItem();
+			Object end = thurEndBox.getSelectedItem();
+			friStartBox.setSelectedItem(start);
+			friEndBox.setSelectedItem(end);
+		}
+	};
+	repeatThu.addActionListener(actionListenerThu);	
+	
 			
 	JPanel saturdayPanel = new JPanel(new GridBagLayout());
 	JLabel sat = new JLabel("Saturday:");
@@ -243,7 +289,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel sStart = new JLabel("Available from: ");
 	saturdayPanel.add(sStart, c);	
-	JComboBox satStartBox = new JComboBox();
+	JComboBox<String> satStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		satStartBox.addItem(startTimes[x]);
@@ -254,7 +300,7 @@ public class CreateCalendarGUI {
 	JLabel sEnd = new JLabel(" until: ");
 	saturdayPanel.add(sEnd, c);
 	
-	JComboBox satEndBox = new JComboBox();
+	JComboBox<String> satEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		satEndBox.addItem(endTimes[x]);
 	}
@@ -265,6 +311,18 @@ public class CreateCalendarGUI {
 	c.gridx = 4;
 	saturdayPanel.add(repeatFri, c);
 	
+	ActionListener actionListenerFri = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = friStartBox.getSelectedItem();
+			Object end = friEndBox.getSelectedItem();
+			satStartBox.setSelectedItem(start);
+			satEndBox.setSelectedItem(end);
+		}
+	};
+	repeatFri.addActionListener(actionListenerFri);	
+	
+	
 	JPanel sundayPanel = new JPanel(new GridBagLayout());
 	JLabel sun = new JLabel("Sunday:");
 	c.gridy = 0;
@@ -273,7 +331,7 @@ public class CreateCalendarGUI {
 	c.gridy = 1;
 	JLabel suStart = new JLabel("Available from: ");
 	sundayPanel.add(suStart, c);	
-	JComboBox sunStartBox = new JComboBox();
+	JComboBox<String> sunStartBox = new JComboBox();
 	
 	for(int x = 0; x < startTimes.length; x++) {
 		sunStartBox.addItem(startTimes[x]);
@@ -284,7 +342,7 @@ public class CreateCalendarGUI {
 	JLabel suEnd = new JLabel(" until: ");
 	sundayPanel.add(suEnd, c);
 	
-	JComboBox sunEndBox = new JComboBox();
+	JComboBox<String> sunEndBox = new JComboBox();
 	for (int x = 0; x < endTimes.length; x++){
 		sunEndBox.addItem(endTimes[x]);
 	}
@@ -294,6 +352,18 @@ public class CreateCalendarGUI {
 	JButton repeatSat = new JButton("Repeat Saturday");
 	c.gridx = 4;
 	sundayPanel.add(repeatSat, c);
+	
+	ActionListener actionListenerSat = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+			Object start = satStartBox.getSelectedItem();
+			Object end = satEndBox.getSelectedItem();
+			sunStartBox.setSelectedItem(start);
+			sunEndBox.setSelectedItem(end);
+		}
+	};
+	repeatSat.addActionListener(actionListenerSat);	
+	
 
 	
 	cFrame.add(mondayPanel);
