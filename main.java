@@ -63,6 +63,7 @@ public class main{
 		Day day1 = new Day(DayName.MONDAY);
 		Room gym = new Gym();
 		TimeSlot block = new TimeSlot(Block.values()[0], Block.values()[3]);
+		block.printBlocks();
 		Info info1 = new Info(g1, day1, gym, block);
 		fall.makeRequest(info1);
 	//	String sInfo = readSchedule(fall);

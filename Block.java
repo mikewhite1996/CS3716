@@ -2,7 +2,7 @@ public enum Block {
   A("9am - 10am"),
   B("10am - 11am"),
   C("11am - 12pm"),
-  D("12pm - 1pm"),	
+  D("12pm - 1pm"),
   E("1pm - 2pm"),
   F("2pm - 3pm"),
   G("3pm - 4pm"),
@@ -13,13 +13,20 @@ public enum Block {
   L("8pm - 9pm"),
   M("9pm - 10pm");
 
-  private String block;
 
-  private Block(String value) {
-    block = value;
+  private String times;
+
+  private Block(String s) {
+    times = s;
   }
 
-  public String getBlock() {
-    return block;
+
+
+  public String toString() {
+    return this.times;
   }
+
+  //public equals()
+
+
 }

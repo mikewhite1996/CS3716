@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+
 public class Info {
   private Day theDay;
   private Room theRoom;
@@ -40,7 +43,15 @@ public class Info {
 
     boolean conflict = false;
 
-    if ()
+    Block a = this.theBlock.getStartBlock();
+    ArrayList<Block> rA = check.getTheTimeSlot().getRange();
+
+    for (int i = 0; i < rA.size() ++i) {
+      if a.equals
+    }
+
+
+
     return this.theDay.toString().equals(check.theDay.toString())
           && this.theRoom.getName().equals(check.theRoom.getName())
           && this.theBlock.getStartBlock().equals(check.theBlock.getEndBlock());
@@ -48,7 +59,7 @@ public class Info {
 
   public String toString() {
     String s = (theDay.toString() + "\n" + theRoom.toString() +"\n" +
-                theBlock.getStartBlock().getBlock() + " || " + theBlock.getEndBlock().getBlock());
+                theBlock.getStartBlock().toString() + " || " + theBlock.getEndBlock().toString());
     return s;
   }
 

@@ -11,10 +11,39 @@ public class TimeSlot {
     endBlock = end;
     int startIndex = startBlock.ordinal();
     int endIndex = endBlock.ordinal();
+
+
     for (Block b: Block.values()) {
       if (b.ordinal() >= startIndex && b.ordinal() <= endIndex)
       range.add(b);
     }
+  }
+
+  public void getByString() {
+    for (Block b: Block.values()) {
+      if (b.equals("9am - 10am")) {
+        System.out.println("found match for '9am - 10am'");
+      }
+    }
+  }
+
+  /*public boolean equals(Object other) {
+    (!(other instanceof TimeSlot)) {
+      return false;
+    }
+    TimeSlot check = (TimeSlot) other;
+    return this.startBlock
+  }*/
+//unfinished
+  public void printBlocks() {
+    for(int i = 0; i < range.size(); ++i) {
+      String letter = range.get(i).toString();
+      System.out.println(range.get(i).toString());
+    }
+  }
+
+  public ArrayList<Block> getRange() {
+    return range;
   }
 
 
