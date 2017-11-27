@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class CreateCalendarGUI {
 	public static void main(String args[]){
 	JFrame cFrame = new JFrame();
-	GridLayout g = new GridLayout(9, 1);
+	GridLayout g = new GridLayout(10, 1);
 	cFrame.setLayout(g);
 	final int FRAME_WIDTH = 600;
 	final int FRAME_HEIGHT = 600;
@@ -140,6 +140,10 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	tuesdayPanel.add(tuesEndBox, c);
+	JButton repeatMon = new JButton("Repeat Monday");
+	c.gridx = 4;
+	tuesdayPanel.add(repeatMon, c);
+			
 	
 	JPanel wednesdayPanel = new JPanel(new GridBagLayout());
 	JLabel wed = new JLabel("Wednesday:");
@@ -167,6 +171,9 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	wednesdayPanel.add(wedEndBox, c);
+	JButton repeatTue = new JButton("Repeat Tuesday");
+	c.gridx = 4;
+	wednesdayPanel.add(repeatTue, c);
 	
 	JPanel thursdayPanel = new JPanel(new GridBagLayout());
 	JLabel thu = new JLabel("Thursday:");
@@ -194,6 +201,9 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	thursdayPanel.add(thurEndBox, c);
+	JButton repeatWed = new JButton("Repeat Wednesday");
+	c.gridx = 4;
+	thursdayPanel.add(repeatWed, c);
 	
 	JPanel fridayPanel = new JPanel(new GridBagLayout());
 	JLabel fri = new JLabel("Friday:");
@@ -221,6 +231,9 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	fridayPanel.add(friEndBox, c);
+	JButton repeatThu = new JButton("Repeat Thursday");
+	c.gridx = 4;
+	fridayPanel.add(repeatThu, c);
 			
 	JPanel saturdayPanel = new JPanel(new GridBagLayout());
 	JLabel sat = new JLabel("Saturday:");
@@ -248,6 +261,9 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	saturdayPanel.add(satEndBox, c);
+	JButton repeatFri = new JButton("Repeat Friday");
+	c.gridx = 4;
+	saturdayPanel.add(repeatFri, c);
 	
 	JPanel sundayPanel = new JPanel(new GridBagLayout());
 	JLabel sun = new JLabel("Sunday:");
@@ -275,60 +291,10 @@ public class CreateCalendarGUI {
 	
 	c.gridx = 3;
 	sundayPanel.add(sunEndBox, c);
-	
-	c.gridy = 4;
-	JButton schedSubmit = new JButton("Submit");
-	sundayPanel.add(schedSubmit, c);
-
-	
-	/* OLD CODE -- TO USE CHECK BOXES AND PROPERLY ALIGN
-	//ButtonGroup blockGroup = new ButtonGroup();
-	JCheckBox A = new JCheckBox("A");
-	JCheckBox B = new JCheckBox("B");
-	JCheckBox C = new JCheckBox("C");
-	JCheckBox D = new JCheckBox("D");
-	JCheckBox E = new JCheckBox("E");
-	JCheckBox F = new JCheckBox("F");
-	JCheckBox G = new JCheckBox("G");
-	JCheckBox H = new JCheckBox("H");
-	JCheckBox I = new JCheckBox("I");
-	JCheckBox J = new JCheckBox("J");
-	JCheckBox K = new JCheckBox("K");
-	JCheckBox L = new JCheckBox("L");
-	JCheckBox M = new JCheckBox("M"); */
-	
-
-	/*
-	c.gridy = 4;
-	daysPanel.add(mon, c);
-	c.gridy = 5;
-	daysPanel.add(A, c);
-	c.gridx = 1;
-	daysPanel.add(B, c);
-	c.gridx = 2;
-	daysPanel.add(C, c);
-	c.gridx = 3;
-	daysPanel.add(D, c);
+	JButton repeatSat = new JButton("Repeat Saturday");
 	c.gridx = 4;
-	daysPanel.add(E, c);
-	c.gridx = 5;
-	daysPanel.add(F, c);
-	c.gridx = 6;
-	daysPanel.add(G, c);
-	c.gridx = 7;
-	daysPanel.add(H, c);
-	c.gridx = 8;
-	daysPanel.add(I, c);
-	c.gridx = 9;
-	daysPanel.add(J, c);
-	c.gridx = 10;
-	daysPanel.add(K, c);
-	c.gridx = 11;
-	daysPanel.add(L, c);
-	c.gridx = 12;
-	daysPanel.add(M, c);
-	*/
-	
+	sundayPanel.add(repeatSat, c);
+
 	
 	cFrame.add(mondayPanel);
 	cFrame.add(tuesdayPanel);
@@ -337,6 +303,12 @@ public class CreateCalendarGUI {
 	cFrame.add(fridayPanel);
 	cFrame.add(saturdayPanel);
 	cFrame.add(sundayPanel);
+	
+	JPanel sSubmit = new JPanel();
+	JButton schedSubmit = new JButton("Submit");
+	sSubmit.add(schedSubmit);
+	cFrame.add(sSubmit);
+	
 	
 	
 	cFrame.setVisible(true);
