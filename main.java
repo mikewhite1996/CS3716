@@ -58,7 +58,19 @@ public class main{
 	}
 
 	public static void main(String args[]){
+		Schedule fall = new Schedule();
+		Group g1 = new Group("group");
+		Day day1 = new Day(DayName.MONDAY);
+		Room gym = new Gym();
+		TimeSlot block = new TimeSlot(Block.A);
+		Info info1 = new Info(g1, day1, gym, block);
+		fall.makeRequest(info1);
+	//	String sInfo = readSchedule(fall);
+		System.out.println(fall.display());
+
 			new main().createGUI();
+
+
 	}
 
 	protected static void proceed(String answer2) {
@@ -185,6 +197,16 @@ public class main{
 
 	}
 
+	public static String readSchedule(Schedule fall) {
+		String sInfo = fall.display();
+		return sInfo;
+
+	}
+
+	/*public static String getScheduleText() {
+
+	}*/
+
 	public static void dayOrSemesterGUI() {
 		JFrame jframe = new JFrame();
 		JPanel panel = new JPanel();
@@ -231,6 +253,20 @@ public class main{
 		jframe.setVisible(true);
 
 	}
+
+	/*ScheduleGUI() {
+		JFrame jframe = new JFrame();
+		JPanel panel = new JPanel();
+		final int FRAME_WIDTH = 600;
+		final int FRAME_HEIGHT = 600;
+		JLabel label = new JLabel();
+
+		jframe.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+		jframe.setTitle("Schedule");
+		String scheduleText =
+
+
+	}*/
 
 	public static void createScheduleGUI(){
 		JFrame jframe = new JFrame();
@@ -517,8 +553,8 @@ public class main{
 
 
 
-		String labelS = "This is where the created schedule will be viewed";
-		label.setText(labelS);
+		//String labelS = getScheduleText();
+		//label.setText(labelS);
 
 		panel.add(label);
 

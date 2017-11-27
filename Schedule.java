@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Schedule {
   private ArrayList<Info> approvedRequests;
   private ArrayList<Info> pendingRequests;
-  private boolean changed = false;
+  private boolean changed = true;
 
   private ArrayList<Info> sunday;
   private ArrayList<Info> monday;
@@ -50,16 +50,13 @@ public class Schedule {
 
   }
 
-  public void display() {
+  public String display() {
+    String info = "";
     if (changed) {
       for (int i = 0; i < approvedRequests.size(); ++i) {
-        if ((approvedRequests.get(i).getDay()).equals("Monday")) {
-          monday.add(approvedRequests.get(i));
-        }
-      }
-      for (int i = 0; i < monday.size(); ++i) {
-        System.out.println(monday.get(i).toString());
+        info = info + approvedRequests.get(i).toString();
       }
     }
+    return info;
   }
 }
