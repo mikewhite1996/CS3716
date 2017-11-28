@@ -1,7 +1,6 @@
+public interface Block {
 
-public abstract class Block {
-	
-	public abstract String getBlock();
-	
-
+public String getBlock();
+public String toString();
+public boolean equals(Block other);
 }

@@ -13,7 +13,6 @@ public enum Block {
   L("8pm - 9pm"),
   M("9pm - 10pm");
 
-
   private String times;
 
   private Block(String s) {

@@ -1,8 +1,8 @@
-public enum Block_Req{
+public enum Block_Req implements Block {
   A("9am - 10am"),
   B("10am - 11am"),
   C("11am - 12pm"),
-  D("12pm - 1pm"),	
+  D("12pm - 1pm"),
   E("1pm - 2pm"),
   F("2pm - 3pm"),
   G("3pm - 4pm"),
@@ -22,4 +22,18 @@ public enum Block_Req{
   public String getBlock() {
     return block;
   }
+
+  public String toString() {
+    return this.block;
+  }
+
+  public boolean equals(Block other) {
+    if (!(other instanceof Block)) {
+        return false;
+      }
+    Block check = (Block) other;
+    return this.block.equals(other.getBlock());
+  }
+
+
 }

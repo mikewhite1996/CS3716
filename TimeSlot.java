@@ -1,26 +1,26 @@
 import java.util.ArrayList;
 
-public class TimeSlot {
-  private Block startBlock;
-  private Block endBlock;
-  private ArrayList<Block> range = new ArrayList<Block>();
+public class TimeSlot_Sch {
+  private Block_Sch startBlock;
+  private Block_Sch endBlock;
+  private ArrayList<Block_Sch> range = new ArrayList<Block_Sch>();
 
 
-  public TimeSlot(Block start, Block end) {
+  public TimeSlot_Sch(Block_Sch start, Block_Sch end) {
     startBlock = start;
     endBlock = end;
     int startIndex = startBlock.ordinal();
     int endIndex = endBlock.ordinal();
 
 
-    for (Block b: Block.values()) {
+    for (Block_Sch b: Block_Sch.values()) {
       if (b.ordinal() >= startIndex && b.ordinal() <= endIndex)
       range.add(b);
     }
   }
 
   public void getByString() {
-    for (Block b: Block.values()) {
+    for (Block_Sch b: Block_Sch.values()) {
       if (b.equals("9am - 10am")) {
         System.out.println("found match for '9am - 10am'");
       }
@@ -28,10 +28,10 @@ public class TimeSlot {
   }
 
   public boolean equals(Object other) {
-    if (!(other instanceof TimeSlot)) {
+    if (!(other instanceof TimeSlot_Sch)) {
       return false;
     }
-    TimeSlot check = (TimeSlot) other;
+    TimeSlot_Sch check = (TimeSlot_Sch) other;
     return this.startBlock.equals(check.startBlock)
           && this.endBlock.equals(check.endBlock);
   }
@@ -44,7 +44,7 @@ public class TimeSlot {
     }
   }
 
-  public ArrayList<Block> getRange() {
+  public ArrayList<Block_Sch> getRange() {
     return range;
   }
 
@@ -52,11 +52,11 @@ public class TimeSlot {
 
 
 
-  public Block getStartBlock() {
+  public Block_Sch getStartBlock() {
     return startBlock;
   }
 
-  public Block getEndBlock() {
+  public Block_Sch getEndBlock() {
     return endBlock;
   }
 
