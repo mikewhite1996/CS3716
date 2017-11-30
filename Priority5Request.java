@@ -1,14 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class Priority5Request {
-	static JTextField pField;
+	static String p5name;
+	static String p5semester;
+	static String p5room;
 	public Priority5Request() {}
 		public static void main(String[] args){
 		JFrame p5Frame = new JFrame();
 		GridLayout p5g = new GridLayout(6, 1);
 		p5Frame.setLayout(p5g);
 		final int FRAME_WIDTH = 300;
-		final int FRAME_HEIGHT = 450;
+		final int FRAME_HEIGHT = 550;
 		p5Frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		p5Frame.setTitle("Submit A Priority 5 Request");
 		
@@ -111,17 +115,66 @@ public class Priority5Request {
 		p5Panel5.add(p5TimeBox, c);
 		p5Frame.add(p5Panel5);
 		
+		
 		JPanel p5Sub = new JPanel(new GridBagLayout());
-		JButton p5Submit = new JButton("Submit");
+		JButton p5getTime = new JButton("Get Times");
 		c.gridy = 0;
+		p5Sub.add(p5getTime, c);
+		JButton p5Submit = new JButton("Submit");
+		c.gridy = 1;
 		p5Sub.add(p5Submit, c);
 	    p5Frame.add(p5Sub);
 		
+
+	    ActionListener actionListener = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+				if(e.getSource() instanceof JRadioButton){
+					JButton Button = (JButton) (e.getSource());
+					if(Button.isSelected()){
+						String choice = Button.getText();
+						
+					}
+				}
+				
+			}
+			
+		};
+		
+		p5getTime.addActionListener(actionListener);
+		p5Submit.addActionListener(actionListener);
+	
 		
 		
 		p5Frame.setVisible(true);
 		p5Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		p5name = p5NameField.getText();
+		
+		if (p5Fall.isSelected()) {
+			p5semester = "fall";
+		}
+		else if (p5Winter.isSelected()){
+			p5semester = "winter";
+		}
+		else if (p5Summer.isSelected()){
+			p5semester = "summer";
+		}
+		
+		p5room = (String) p5RoomBox.getSelectedItem();
+		
+		
 	}
+		
+		public static String getName() {
+			return p5name;
+		}
+		
+		public static String getSemester() {
+			return p5semester;
+		}
+		
+		public static String getRoom() {
+			return p5room;
+		}
+		
 }
-
-
