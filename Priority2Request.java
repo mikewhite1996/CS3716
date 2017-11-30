@@ -1,14 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class Priority2Request {
-	static JTextField pField;
+	static String name;
+	static String semester;
+	static String room;
 	public Priority2Request() {}
 		public static void main(String[] args){
 		JFrame p2Frame = new JFrame();
 		GridLayout p2g = new GridLayout(6, 1);
 		p2Frame.setLayout(p2g);
 		final int FRAME_WIDTH = 300;
-		final int FRAME_HEIGHT = 450;
+		final int FRAME_HEIGHT = 600;
 		p2Frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		p2Frame.setTitle("Submit A Priority 2 Request");
 		
@@ -68,7 +72,6 @@ public class Priority2Request {
 		JPanel p2Panel4 = new JPanel(new GridBagLayout());
 		JLabel p2DayLabel = new JLabel("Day:");
 		JComboBox p2DayBox = new JComboBox();
-		p2DayBox.setEnabled(false);
 		p2DayBox.addItem("Monday");
 		p2DayBox.addItem("Tuesday");
 		p2DayBox.addItem("Wednesday");
@@ -112,19 +115,70 @@ public class Priority2Request {
 		p2Frame.add(p2Panel5);
 		
 		JPanel p2Sub = new JPanel(new GridBagLayout());
-		JButton p2Submit = new JButton("Submit");
+		JButton p2getTime = new JButton("Get Times");
 		c.gridy = 0;
+		p2Sub.add(p2getTime, c);
+		JButton p2Submit = new JButton("Submit");
+		c.gridy = 1;
 		p2Sub.add(p2Submit, c);
 	    JButton p2p2 = new JButton("Make Another Request (Priority 3)");
-	    c.gridy = 1;
+	    c.gridy = 2;
 	    p2Sub.add(p2p2, c);
 	    p2Frame.add(p2Sub);
+		
+
+	    ActionListener actionListener = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+				if(e.getSource() instanceof JRadioButton){
+					JButton Button = (JButton) (e.getSource());
+					if(Button.isSelected()){
+						String choice = Button.getText();
+						proceed(choice);
+					}
+				}
+				
+			}
+			
+		};
+		
+		p2getTime.addActionListener(actionListener);
+		p2Submit.addActionListener(actionListener);
+		p2p2.addActionListener(actionListener);
 		
 		
 		
 		p2Frame.setVisible(true);
 		p2Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		name = p2NameField.getText();
+		
+		if (p2Fall.isSelected()) {
+			semester = "fall";
+		}
+		else if (p2Winter.isSelected()){
+			semester = "winter";
+		}
+		else if (p2Summer.isSelected()){
+			semester = "summer";
+		}
+		
+		room = (String) p2RoomBox.getSelectedItem();
+		
+		
 	}
+		
+		public static String getName() {
+			return name;
+		}
+		
+		public static String getSemester() {
+			return semester;
+		}
+		
+		public static String getRoom() {
+			return room;
+		}
+		
 }
 
 
