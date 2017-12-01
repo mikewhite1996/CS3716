@@ -1,14 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class Priority4Request {
-	static JTextField pField;
+	static String p4name;
+	static String p4semester;
+	static String p4room;
 	public Priority4Request() {}
 		public static void main(String[] args){
 		JFrame p4Frame = new JFrame();
 		GridLayout p4g = new GridLayout(6, 1);
 		p4Frame.setLayout(p4g);
 		final int FRAME_WIDTH = 300;
-		final int FRAME_HEIGHT = 450;
+		final int FRAME_HEIGHT = 600;
 		p4Frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		p4Frame.setTitle("Submit A Priority 4 Request");
 		
@@ -88,20 +92,6 @@ public class Priority4Request {
 		JLabel p4TimeLabel = new JLabel("Time:");
 		JComboBox p4TimeBox = new JComboBox();
 		p4TimeBox.setEnabled(false);
-	    /*p4TimeBox.addItem("9am - 10am");
-		/*p4TimeBox.addItem("10am - 11am");
-		p4TimeBox.addItem("11am - 12pm");
-		p4TimeBox.addItem("12pm - 1pm");
-		p4TimeBox.addItem("1pm - 2pm");
-		p4TimeBox.addItem("2pm - 3pm");
-		p4TimeBox.addItem("3pm - 4pm");
-		p4TimeBox.addItem("4pm - 5pm");
-		p4TimeBox.addItem("5pm - 6pm");
-		p4TimeBox.addItem("6pm - 7pm");
-		p4TimeBox.addItem("7pm - 8pm");
-		p4TimeBox.addItem("8pm - 9pm");
-		p4TimeBox.addItem("9pm - 10pm");
-		*/
 		c.gridy = 0;
 		c.gridx = 0;
 		p4Panel5.add(p4TimeLabel, c);
@@ -112,19 +102,68 @@ public class Priority4Request {
 		p4Frame.add(p4Panel5);
 		
 		JPanel p4Sub = new JPanel(new GridBagLayout());
-		JButton p4Submit = new JButton("Submit");
+		JButton p4getTime = new JButton("Get Times");
 		c.gridy = 0;
+		p4Sub.add(p4getTime, c);
+		JButton p4Submit = new JButton("Submit");
+		c.gridy = 1;
 		p4Sub.add(p4Submit, c);
-	    JButton p4p2 = new JButton("Make Another Request (Priority 5)");
-	    c.gridy = 1;
+	    JButton p4p2 = new JButton("Make Another Request (Priority 4)");
+	    c.gridy = 2;
 	    p4Sub.add(p4p2, c);
 	    p4Frame.add(p4Sub);
+		
+
+	    ActionListener actionListener = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+				if(e.getSource() instanceof JRadioButton){
+					JButton Button = (JButton) (e.getSource());
+					if(Button.isSelected()){
+						String choice = Button.getText();
+						
+					}
+				}
+				
+			}
+			
+		};
+		
+		p4getTime.addActionListener(actionListener);
+		p4Submit.addActionListener(actionListener);
+		p4p2.addActionListener(actionListener);
 		
 		
 		
 		p4Frame.setVisible(true);
 		p4Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		p4name = p4NameField.getText();
+		
+		if (p4Fall.isSelected()) {
+			p4semester = "fall";
+		}
+		else if (p4Winter.isSelected()){
+			p4semester = "winter";
+		}
+		else if (p4Summer.isSelected()){
+			p4semester = "summer";
+		}
+		
+		p4room = (String) p4RoomBox.getSelectedItem();
+		
+		
 	}
+		
+		public static String getName() {
+			return p4name;
+		}
+		
+		public static String getSemester() {
+			return p4semester;
+		}
+		
+		public static String getRoom() {
+			return p4room;
+		}
+		
 }
-
-

@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class Priority3Request {
-	static JTextField pField;
+	static String p3name;
+	static String p3semester;
+	static String p3room;
 	public Priority3Request() {}
 		public static void main(String[] args){
 		JFrame p3Frame = new JFrame();
@@ -112,19 +116,68 @@ public class Priority3Request {
 		p3Frame.add(p3Panel5);
 		
 		JPanel p3Sub = new JPanel(new GridBagLayout());
-		JButton p3Submit = new JButton("Submit");
+		JButton p3getTime = new JButton("Get Times");
 		c.gridy = 0;
+		p3Sub.add(p3getTime, c);
+		JButton p3Submit = new JButton("Submit");
+		c.gridy = 1;
 		p3Sub.add(p3Submit, c);
 	    JButton p3p2 = new JButton("Make Another Request (Priority 4)");
-	    c.gridy = 1;
+	    c.gridy = 2;
 	    p3Sub.add(p3p2, c);
 	    p3Frame.add(p3Sub);
+		
+
+	    ActionListener actionListener = new ActionListener(){
+
+		public void actionPerformed(ActionEvent e) {
+				if(e.getSource() instanceof JRadioButton){
+					JButton Button = (JButton) (e.getSource());
+					if(Button.isSelected()){
+						String choice = Button.getText();
+						proceed(choice);
+					}
+				}
+				
+			}
+			
+		};
+		
+		p3getTime.addActionListener(actionListener);
+		p3Submit.addActionListener(actionListener);
+		p3p2.addActionListener(actionListener);
 		
 		
 		
 		p3Frame.setVisible(true);
 		p3Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		name = p3NameField.getText();
+		
+		if (p3Fall.isSelected()) {
+			semester = "fall";
+		}
+		else if (p3Winter.isSelected()){
+			semester = "winter";
+		}
+		else if (p3Summer.isSelected()){
+			semester = "summer";
+		}
+		
+		room = (String) p3RoomBox.getSelectedItem();
+		
+		
 	}
+		
+		public static String getName() {
+			return name;
+		}
+		
+		public static String getSemester() {
+			return semester;
+		}
+		
+		public static String getRoom() {
+			return room;
+		}
+		
 }
-
-
