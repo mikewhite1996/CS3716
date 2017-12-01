@@ -995,6 +995,18 @@ public class main{
 						Day tuesday = new Day(DayName.TUESDAY);
 						TimeSlot tuesdayTime = new TimeSlot(Block_Sch.values()[start_indexT],Block_Sch.values()[end_indexT]);
 						Info tuesFall = new Info(name, tuesday, auditorium, tuesdayTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumTuesFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(tuesFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemTues.makeRequest(tuesFall);
 						System.out.println(fallSemTues.display());
 						
@@ -1005,6 +1017,18 @@ public class main{
 						Day weds = new Day(DayName.WEDNESDAY);
 						TimeSlot wedsTime = new TimeSlot(Block_Sch.values()[start_indexW],Block_Sch.values()[end_indexW]);
 						Info wedsFall = new Info(name, weds, auditorium, wedsTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumWedsFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(wedsFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemWeds.makeRequest(wedsFall);
 						System.out.println(fallSemWeds.display());
 						
@@ -1014,6 +1038,18 @@ public class main{
 						Day thurs = new Day(DayName.THURSDAY);
 						TimeSlot thursTime = new TimeSlot(Block_Sch.values()[start_indexTR],Block_Sch.values()[end_indexTR]);
 						Info thursFall = new Info(name, thurs, auditorium, thursTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumThursFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(thursFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemThurs.makeRequest(thursFall);
 						System.out.println(fallSemThurs.display());
 						
@@ -1023,6 +1059,18 @@ public class main{
 						Day friday = new Day(DayName.FRIDAY);
 						TimeSlot fridayTime = new TimeSlot(Block_Sch.values()[start_indexF],Block_Sch.values()[end_indexF]);
 						Info friFall = new Info(name, friday, auditorium, fridayTime);
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumFriFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(friFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
+						
 						fallSemFri.makeRequest(friFall);
 						System.out.println(fallSemFri.display());
 						
@@ -1032,6 +1080,18 @@ public class main{
 						Day saturday = new Day(DayName.SATURDAY);
 						TimeSlot satTime = new TimeSlot(Block_Sch.values()[start_indexS],Block_Sch.values()[end_indexS]);
 						Info satFall = new Info(name, saturday, auditorium, satTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumSatFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(satFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSat.makeRequest(satFall);
 						System.out.println(fallSemSat.display());
 						
@@ -1042,6 +1102,18 @@ public class main{
 						Day sunday = new Day(DayName.SUNDAY);
 						TimeSlot sunTime = new TimeSlot(Block_Sch.values()[start_indexSS],Block_Sch.values()[end_indexSS]);
 						Info sunFall = new Info(name, sunday, auditorium, sunTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\AuditoriumSunFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(sunFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSun.makeRequest(sunFall);
 						System.out.println(fallSemSun.display());
 						
@@ -1073,6 +1145,18 @@ public class main{
 						Day tuesday = new Day(DayName.TUESDAY);
 						TimeSlot tuesdayTime = new TimeSlot(Block_Sch.values()[start_indexT],Block_Sch.values()[end_indexT]);
 						Info tuesFall = new Info(name, tuesday, comp, tuesdayTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabTuesFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(tuesFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemTues.makeRequest(tuesFall);
 						System.out.println(fallSemTues.display());
 						
@@ -1083,6 +1167,18 @@ public class main{
 						Day weds = new Day(DayName.WEDNESDAY);
 						TimeSlot wedsTime = new TimeSlot(Block_Sch.values()[start_indexW],Block_Sch.values()[end_indexW]);
 						Info wedsFall = new Info(name, weds, comp, wedsTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabWedsFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(wedsFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemWeds.makeRequest(wedsFall);
 						System.out.println(fallSemWeds.display());
 						
@@ -1092,6 +1188,18 @@ public class main{
 						Day thurs = new Day(DayName.THURSDAY);
 						TimeSlot thursTime = new TimeSlot(Block_Sch.values()[start_indexTR],Block_Sch.values()[end_indexTR]);
 						Info thursFall = new Info(name, thurs, comp, thursTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabThursFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(thursFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemThurs.makeRequest(thursFall);
 						System.out.println(fallSemThurs.display());
 						
@@ -1101,6 +1209,18 @@ public class main{
 						Day friday = new Day(DayName.FRIDAY);
 						TimeSlot fridayTime = new TimeSlot(Block_Sch.values()[start_indexF],Block_Sch.values()[end_indexF]);
 						Info friFall = new Info(name, friday, comp, fridayTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabFriFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(friFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemFri.makeRequest(friFall);
 						System.out.println(fallSemFri.display());
 						
@@ -1110,6 +1230,18 @@ public class main{
 						Day saturday = new Day(DayName.SATURDAY);
 						TimeSlot satTime = new TimeSlot(Block_Sch.values()[start_indexS],Block_Sch.values()[end_indexS]);
 						Info satFall = new Info(name, saturday, comp, satTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabSatFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(satFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSat.makeRequest(satFall);
 						System.out.println(fallSemSat.display());
 						
@@ -1120,6 +1252,18 @@ public class main{
 						Day sunday = new Day(DayName.SUNDAY);
 						TimeSlot sunTime = new TimeSlot(Block_Sch.values()[start_indexSS],Block_Sch.values()[end_indexSS]);
 						Info sunFall = new Info(name, sunday, comp, sunTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\ComputerLabSunFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(sunFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSun.makeRequest(sunFall);
 						System.out.println(fallSemSun.display());
 						
@@ -1152,6 +1296,18 @@ public class main{
 						Day tuesday = new Day(DayName.TUESDAY);
 						TimeSlot tuesdayTime = new TimeSlot(Block_Sch.values()[start_indexT],Block_Sch.values()[end_indexT]);
 						Info tuesFall = new Info(name, tuesday, lect, tuesdayTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallTuesFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(tuesFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemTues.makeRequest(tuesFall);
 						System.out.println(fallSemTues.display());
 						
@@ -1162,6 +1318,18 @@ public class main{
 						Day weds = new Day(DayName.WEDNESDAY);
 						TimeSlot wedsTime = new TimeSlot(Block_Sch.values()[start_indexW],Block_Sch.values()[end_indexW]);
 						Info wedsFall = new Info(name, weds, lect, wedsTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallWedsFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(wedsFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemWeds.makeRequest(wedsFall);
 						System.out.println(fallSemWeds.display());
 						
@@ -1171,6 +1339,18 @@ public class main{
 						Day thurs = new Day(DayName.THURSDAY);
 						TimeSlot thursTime = new TimeSlot(Block_Sch.values()[start_indexTR],Block_Sch.values()[end_indexTR]);
 						Info thursFall = new Info(name, thurs, lect, thursTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallThursFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(thursFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemThurs.makeRequest(thursFall);
 						System.out.println(fallSemThurs.display());
 						
@@ -1180,6 +1360,18 @@ public class main{
 						Day friday = new Day(DayName.FRIDAY);
 						TimeSlot fridayTime = new TimeSlot(Block_Sch.values()[start_indexF],Block_Sch.values()[end_indexF]);
 						Info friFall = new Info(name, friday, lect, fridayTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallFriFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(friFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemFri.makeRequest(friFall);
 						System.out.println(fallSemFri.display());
 						
@@ -1189,6 +1381,18 @@ public class main{
 						Day saturday = new Day(DayName.SATURDAY);
 						TimeSlot satTime = new TimeSlot(Block_Sch.values()[start_indexS],Block_Sch.values()[end_indexS]);
 						Info satFall = new Info(name, saturday, lect, satTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallSatFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(satFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSat.makeRequest(satFall);
 						System.out.println(fallSemSat.display());
 						
@@ -1199,6 +1403,18 @@ public class main{
 						Day sunday = new Day(DayName.SUNDAY);
 						TimeSlot sunTime = new TimeSlot(Block_Sch.values()[start_indexSS],Block_Sch.values()[end_indexSS]);
 						Info sunFall = new Info(name, sunday, lect, sunTime);
+						
+						try {
+							FileOutputStream fileOut=
+									new FileOutputStream("C:\\Users\\LectureHallSunFallinfo.ser");
+							ObjectOutputStream out = new ObjectOutputStream(fileOut);
+							out.writeObject(sunFall);
+							out.close();
+							fileOut.close();
+							System.out.println("works");
+						} catch (IOException i) {
+							i.printStackTrace();
+						}
 						fallSemSun.makeRequest(sunFall);
 						System.out.println(fallSemSun.display());
 					}
@@ -2423,6 +2639,7 @@ public class main{
 												name += request.get(i).toString() + " - ";
 											}
 											p1TimeBox.setEnabled(true);
+											p1TimeBox.removeAllItems();
 											p1TimeBox.addItem(name);
 											
 										}if(p1RoomBox.getSelectedItem().equals("Music")) {
@@ -2637,10 +2854,955 @@ public class main{
 											p1TimeBox.setEnabled(true);
 											p1TimeBox.addItem(name);
 										}
+									}if(p1DayBox.getSelectedItem().equals("Wednesday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Wedscsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicWedsFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumWedsFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabWedsFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallWedsFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Thursday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Thurscsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallThursFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Friday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Fricsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallFriFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Friday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Thurscsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallThursFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Friday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Fridaycsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabFriFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallFriFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Friday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Thurscsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabThursFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallThursFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Saturday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Satcsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicSatFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumSatFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabSatFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallSatFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}if(p1DayBox.getSelectedItem().equals("Sunday")) {
+											if(p1RoomBox.getSelectedItem().equals("Gym")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\Sundaycsinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+												
+											}if(p1RoomBox.getSelectedItem().equals("Music")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\MusicSunFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Auditorium")){
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\AuditoriumSunFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Computer Lab")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\ComputerLabSunFallInfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}if(p1RoomBox.getSelectedItem().equals("Lecture Hall")) {
+												String name = "";
+												Info test = null;
+												try {
+											         FileInputStream fileIn = new FileInputStream("C:\\Users\\LectureHallSunFallinfo.ser");
+											         ObjectInputStream in = new ObjectInputStream(fileIn);
+											         test = (Info) in.readObject();
+											         in.close();
+											         fileIn.close();
+											      } catch (IOException i) {
+											         i.printStackTrace();
+											         return;
+											      } catch (ClassNotFoundException c) {
+											         System.out.println("Employee class not found");
+											         c.printStackTrace();
+											         return;
+											      }
+												ArrayList<Block_Sch> request = test.getTheTimeSlot().getRange();
+												for(int i = 0; i < request.size(); i++) {
+													name += request.get(i).toString() + " - ";
+												}
+												p1TimeBox.setEnabled(true);
+												p1TimeBox.addItem(name);
+											}
+										}
 									}
 								}
 							}
-						}
+						
 					
 					
 				
