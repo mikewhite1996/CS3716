@@ -3,12 +3,14 @@ public class InfoReq {
   private String name;
   private String priority;
   private String semester;
+  private String room;
 
-  public InfoReq(Info i, String n, String p, String s) {
+  public InfoReq(Info i, String n, String p, String s, String r) {
     fo = i;
     name = n;
     priority = p;
     semester = s;
+    room = r;
   }
 
 
